@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+{% extends "testapp/base.html" %}
+{% block body_block %}
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .google-map {
+            padding-bottom: 50%;
+            position: relative;
+        }
+        
+        .google-map iframe {
+            height: 500px;
+            width: 500px;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+    </style>
+    <body>
+        <div>
+            <h1>Wonderla Hyderabad
+                Kongar Khurd (A), Telangana 501510, India</h1>
+        </div>
+        <div class="google-map">
+            <h1>Location</h1>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31183028.039339427!2d41.56199959999999!3d17.434713500000022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a07682bfba5%3A0x521f10f7798eaef!2sWonderland%20Park!5e0!3m2!1sen!2sin!4v1684758124662!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        {% endblock %}
+    </body>
+    </html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color:lightskyblue;
+        }
+        .first-container{
+            background-color: rgb(105, 136, 58);
+            text-align: center;
+            font-style:italic;
+            
+        }
+        .second-container .second-first img {
+            width: 600px;
+            height: 400px;
+            margin-top: 10px;
+            grid-auto-rows: 10px;
+                      
+
+        }
+        .second-container{
+            margin-top: 30px;
+            font-size: 20px;
+            font-style: italic;
+            color: black;
+            text-align: center;
+
+        }
+        .first-container h1{
+            color:rgb(148, 24, 24)
+        }
+    </style>
+    <style>
+        .image-container {
+            position: relative;
+            display: inline-block;
+          }
+          
+          .image-container img {
+            transition: opacity 0.3s ease;
+          }
+          
+          .image-container:hover img {
+            opacity: 0.7; /* Change the opacity value as desired */
+          }
+          
+    </style>
+   
+</head>
+<body>
+    <div class=" first-container">
+        <h1>Food and Dinging</h1>
+    </div>
+
+    <div class="second-container">
+        <h4>Food and Dining at Wonderla Park, Hyderabad</h4>
+        <div class="second-first">
+            <img src="{% static 'testapp/image/1.jpg' %}" alt="">
+            <img src="{% static 'testapp/image/2.jpg' %}" alt="">
+            <img src="{% static 'testapp/image/3.jpg' %}" alt="">
+            <img src="{% static 'testapp/image/4.jpg' %}" alt="">
+            <img src="{% static 'testapp/image/5.jpg' %}" alt="">
+            <img src="{% static 'testapp/image/6.jpg' %}" alt="">
+            <img src="{% static 'testapp/image/7.jpg' %}" alt="">
+        </div>
+    <div class="second-container">
+            <p>Explore a variety of flavours at Wonderla Hyderabad where we treat your tummy to shades of happiness. Our Hyderabad amusement park offers four multi-cuisine eateries to choose mouth-watering meals from. There are also snack counters and coffee shops for your dining pleasure. You can get your favourite vegetarian and non-vegetarian dishes at our eateries.</p>
+        </div>
+       
+    {% endblock %}
+</body>
+</html>

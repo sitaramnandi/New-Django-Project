@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+{% load static %}
+<html>
+<head>
+    <title>Image Gallery Example with Hover Animation</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+      div.gallery {
+    border: 1px solid #ccc;
+    transition: border 0.3s;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+
+  div.desc {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 33.33333%;
+    margin-bottom: 20px; /* Add margin-bottom to create a gap between rows */
+  }
+
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .responsive-1{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    
+  }
+  .responsive-1 h1{
+    text-align: center;
+  
+  }
+  .responsive-1 p{
+    text-align: justify;
+   
+  }
+    </style>
+</head>
+<body>
+    <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f1.avif' %}" alt="Cinque Terre">
+          <div class="desc">Lockers & Changing Rooms</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f2.avif' %}" alt="Forest">
+          <div class="desc">Drinking Water</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f3.avif' %}" alt="Northern Lights">
+          <div class="desc">First Aid</div>
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f4.avif' %}" alt="Mountains">
+          <div class="desc">Parking</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f5.avif' %}" alt="Mountains">
+          <div class="desc">Smoking Areas</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f6.avif' %}" alt="Mountains">
+          <div class="desc">Cloak Room</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f7.avif' %}" alt="Mountains">
+          <div class="desc">Wheelchair / Pram</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f8.avif' %}" alt="Mountains">
+          <div class="desc">Student Briefing</div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <img src="{% static 'image/f9.avif' %}" alt="Mountains">
+          <div class="desc">Souvenir Shops</div>
+        </div>
+      </div>
+      <div class="responsive-1">
+        <h1>EZ Pay</h1>
+        <p>EZ Pay, like the name suggests, is an e-wallet that lets you replace your actual wallet with a wristband. Fill it with money as required, and use it anywhere inside our park. Keep your wallet safe and pay with rechargeable EZ Pay Bands at Wonderla!</p>
+        <p>Here's what you need to do to start using the EZ Pay facility in the park -</p>
+        <ul>
+            <li> Go to the ticket or locker counters</li>
+            <li>Ask for the EZ Pay band, pay the security deposit and then add money as needed on the watch by paying at the counter</li>
+            <li>Flash the band at any counter inside the park to buy food, garments, souvenirs, etc.</li>
+        </ul>
+        <p>When it's time for you to leave, you get a refund of your unused money. The EZ Pay wristband makes moving around the park hassle-free. You need not worry about carrying a wallet around, just use EZ Pay for all services inside the park.</p>
+        <p>Note: Unfortunately, pets are not allowed on the premises and there is no pet sitter facility.</p>
+      </div>
+      
+      
+      <div class="clearfix"></div>
+    {% endblock %}
+</body>
+</html>

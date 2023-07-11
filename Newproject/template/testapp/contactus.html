@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .google-map {
+            padding-bottom: 75%;
+            position: relative;
+            height: 0;
+        }
+
+        .google-map iframe {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 20px;
+        }
+        .container-2 form {
+            margin-top: 10px;
+            width: 450px; /* Adjust the maximum width as desired */
+            margin-left: auto;
+            margin-right: auto;
+           
+           
+        }
+        .container-2 input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .container-2 input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .container-2 label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            
+        }
+        .container-2 input[type="text"],
+        .container-2 input[type="password"],
+        .container-2 input[type="email"],
+        .container-2 textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px; /* Add some gap between fields */
+           
+        }
+        .container-2 {
+            display: grid;
+            grid-template-columns: 40% 60%; /* Divides the container into two columns */
+            gap: 0px;
+            
+        }
+      
+        .form {
+            background-color: rgb(145, 213, 236);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+            
+            
+        }
+        .form h1 {
+            text-decoration: underline;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <img src="{% static 'image/contact1.jpg' %}" alt="" width="100%" height="350px">
+    </div>
+   
+    <div class="container-2">
+        <div class="form">
+            <h1>Let's Connect</h1>
+            <form method="post">
+                {{form.as_p}}
+<!--                 
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter Your Name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required>
+               
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="Enter Your Query" required></textarea> -->
+                <input type="submit" value="Submit">
+                {% csrf_token %}
+            </form>
+        </div>
+        <div class="google-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31183028.039339427!2d41.56199959999999!3d17.434713500000022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a07682bfba5%3A0x521f10f7798eaef!2sWonderland%20Park!5e0!3m2!1sen!2sin!4v1684758124662!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+
+{% block body_block %}
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1 {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .container-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            filter: blur(2px);
+        }
+
+        .container-1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .book-now {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .container-2 {
+            display: flex;
+        }
+
+        .container-2 .text-part {
+            flex: 1;
+            padding: 25px;
+            background-color: #fff;
+        }
+
+        .container-2 .text-part p {
+            font-size: 20px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .container-2 .image-part {
+            flex: 1;
+        }
+
+        .container-2 .image-part img {
+            width: 100%;
+            height: auto;
+        }
+
+        .checklist {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.checklist li::before {
+    content: "\2713";
+    display: inline-block;
+    margin-right: 5px;
+    color: lightblue;
+    font-weight: bold;
+}
+
+        .container-2 .text-part p {
+    font-size: 19px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- About Start -->
+    <div class="container-1">
+        <img src="{% static 'image/g4.avif' %}" alt="">
+        <div class="book-now">ABOUT US</div>
+    </div>
+    <!-- About End -->
+
+    <!-- Divided Section Start -->
+    <div class="container-2">
+        <div class="text-part">
+            <h2>About Us</h2>
+            <p>Wonder world Water Park & Resort is the brain child of the enthusiastic mind of the young budding entrepreneur, Mr Niranjan Patra, Managing Director. He is one of the renowned personalities who have been awarded many times for his innovations. He always prioritises other’s happiness. Moreover he loves to make others happy. That’s why he created this kingdom of fun and happiness.
+                Initially it was opened only with a number of splashing water games. It is a zone of non-stop fun for the whole family. But now it has emerged into a place for destination wedding along with large Banquet & Conference hall facility. Basically Wonder world provides fun & celebration together at one place.</p>
+            <ul class="checklist">
+                <li>Water Park Fun</li>
+                <li>Water Rides</li>
+                <li>Water Slides</li>
+                <li>Camp Stay</li>
+                <li>Luxurious resort</li>
+                <li>Large spacious Banquet hall</li>
+                <li>Perfect Destination wedding</li>
+            </ul>
+        </div>
+        <div class="image-part">
+            <img src="{% static 'image/p1.jpg' %}" alt="Image">
+        </div>
+    </div>
+    <!-- Divided Section End -->
+{% endblock %}
+</body> 
+</html>

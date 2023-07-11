@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{% extends "testapp/base.html" %}
+{% block body_block %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy and Policy</title>
+    <style>
+         .container-1 {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .container-1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+            filter: blur(2px);
+        }
+
+        .container-1::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .book-now {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);  
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .container-2{
+            margin-left: 30px;
+            font-style:normal;
+            margin-right: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <img src="{% static 'image/g4.avif' %}" alt="">
+        <div class="book-now">Privacy Policy</div>
+    </div>
+    <div class="container-2">
+        <div part-1>
+            <h1>PRIVACY POLICY</h1>
+            <p>At Wonder world, we are committed to protecting your privacy as a customer and an online visitor to our website. We only use the stipulated information about you to maximize the services that we provide to you. We respect the privacy and confidentiality of the information provided by you and adheres to the Indian Privacy Principles.</p>
+            <p>Please read our privacy policy below carefully.</p>
+        </div>
+        <div part-2>
+            <h3>THE INFORMATION WE COLLECT FROM YOU</h3>
+            <p>During your visits to our website or use of our products and services, we may obtain the following information about you: name, company name, email address, telephone number, credit card details, billing address, geographic location, IP address, survey responses, support queries, blog comments and social media handles (together ‘Personal Data’). You can review, correct, update or delete your Personal Data by either logging into your account and making the changes yourself or contacting us directly to do so.</p>
+        </div>
+        <div part-3>
+            <h3>HOW WE USE YOUR INFORMATION</h3>
+            <p>We use the least information we collect to deliver our services to you, including: communicating with you, providing technical support, notifying you of updates and offers, sharing useful content, measuring customer satisfaction, diagnosing problems and providing you with a personalised website experience.</p>
+            <p>To your mail id or mobile number (if provided), only the marketing communications are only sent to you only if you have requested or subscribed to them. You can opt out of our marketing communications at any time by unsubscribing or emailing us and your request will be addressed immediately.</p>
+            <p>And, if you choose any information such as blog comments and testimonials on our website, to make publicly available, will be available for others to see. If you subsequently remove this information, copies may remain viewable in cached and archived pages on other websites or if others have copied or saved the information.</p>
+        </div>
+        <div part-4>
+            <h3>STORAGE AND SECURITY OF YOUR INFORMATION</h3>
+            <p>We will use all measures to protect the confidentiality of your Personal Data while in our possession or control. All data we receive from you are stored and protected on our secure servers from unauthorized use or access.</p>
+            <p>Credit card / Bank information are encrypted before transmission and not stored by us on our servers. We retain your personal information for as long as needed to provide services to you and as otherwise necessary to comply with our legal obligations resolve disputes and enforce our agreements.Credit card / Bank information are encrypted before transmission and not stored by us on our servers. We retain your personal information for as long as needed to provide services to you and as otherwise necessary to comply with our legal obligations resolve disputes and enforce our agreements.</p>
+            <p>In the event there is a breach of our security and your Personal Data is compromised, we will promptly notify you in compliance with the applicable law.</p>
+        </div>
+        <div part-5>
+            <h3>COOKIES AND PIXELS</h3>
+            <p>Cookie is a small file placed in your web browser that collects information about your web browsing behaviour. It does not access information stored on your computer or any Personal Data (e.g. name, address, email address or telephone number). Most web browsers automatically accept cookies but you can choose to reject cookies by changing your browser settings. This may, however, prevent you from taking full advantage of our website.</p>
+            <p>Our website uses cookies to analyse website traffic, provide social media sharing and liking functionality and help us provide a better website visitor experience.</p>
+        </div>
+        <div part-5>
+            <h3>SHARING YOUR INFORMATION WITH THIRD PARTIES</h3>
+            <p>We do not and will not sell or deal in Personal Data or any customer information.</p>
+
+        </div>
+        <div part-6>
+            <h3>DISCLOSURE OF YOUR INFORMATION</h3>
+            <p>We don’t disclose certain information, which may include your Personal Data, to comply with a legal requirement, such as a law, regulation, court order, and subpoena, warrant, in the course of a legal proceeding or in response to a law enforcement agency request.</p>
+
+        </div>
+        <div part-7>
+            <h3>CHANGE IN PRIVACY POLICY</h3>
+            <p>As we are concerned to ensure our privacy policy remains current, this policy is subject to change. We may modify this policy at any time, in our sole discretion and all modifications will be effective immediately upon our posting of the modifications on this website. Please return periodically to review our privacy policy.</p>
+        </div>
+
+    </div>
+
+</body>
+{% endblock %}
+</html>

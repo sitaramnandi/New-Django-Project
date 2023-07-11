@@ -78,12 +78,21 @@ WSGI_APPLICATION = 'Newproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'WonderlaProject',
+        'USER':'root',
+        'PASSWORD':"Sitaram@2001",
+        'HOST':'localhost',
+        'PORT':3306
     }
 }
 
-
+# Password HASHERS
+PASSWORD_HASHERS = [
+'django.contrib.auth.hashers.Argon2PasswordHasher',
+'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+'django.contrib.auth.hashers.BCryptPasswordHasher',
+]
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
@@ -121,7 +130,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 LOGIN_REDIRECT_URL="/"
 LOGOUT_REDIRECT_URL="/logout"
-STATICFILES_DIRS=[STATIC_DIR]
+STATICFILES_DIRS =[STATIC_DIR]
 
 
 # Default primary key field type

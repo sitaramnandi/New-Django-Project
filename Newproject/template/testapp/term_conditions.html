@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends "testapp/base.html" %}
+    {% block body_block %}
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1 {
+           position: relative;
+           width: 100%;
+           height: 350px;
+           margin-bottom: 20px;
+           overflow: hidden;
+           border-radius: 5px;
+       }
+
+       .container-1 img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           border-radius: 5px;
+           filter: blur(2px);
+       }
+
+       .container-1::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+       }
+
+       .book-now {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);  
+           color: #fff;
+           padding: 10px 20px;
+           border-radius: 5px;
+           font-size: 24px;
+           font-weight: bold;
+           text-align: center;
+       }
+       .checklist {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+.checklist li::before {
+    content: "\2713";
+    display: inline-block;
+    margin-right: 5px;
+    color: rgb(126, 200, 225);
+    font-weight: bold;
+}
+.container-2{
+            margin-left: 70px;
+            font-style:normal;
+            margin-right: 40px;
+            text-align: justify;
+        }
+       </style>
+</head>
+<body>
+    <div class="container-1">
+        <img src="{% static 'image/g4.avif' %}" alt="">
+        <div class="book-now">Term Conditions</div>
+    </div>
+    <div class="container-2">
+        <div class="part-1">
+            <h1>TERMS & CONDITIONS</h1>
+        </div>
+        <ul class="checklist">
+            <li>
+                Tickets are non-transferable, non-exchangeable, non-refundable, non-redeemable for cash and non-replaceable if lost or stolen and will be void if altered.</li>
+            <li>Re-entry is not allowed</li>
+            <li>Food and Beverages from outside are strictly not allowed into the Park.</li>
+            <li>Kids ticket for height beween 3’3” to 4’6”, and above – Adult ticket/li>
+            <li>Cigarettes , alcohol, Thambaku, Gutka and Chewing gums are not allowed in to the park.</li>
+            <li>
+                The Management reserves all the right of admission.</li>
+            <li>Only Nylon or Polyester Swim Wear is mandatory to utilize any Water Rides/Pools.</li>
+            <li>Any clothing or accessory deemed as potentially damaging to the slides will not be permitted</li>
+            <li>People with long hair are recommended to wear a Swimming Cap</li>
+            <li>
+                Maintain discipline in ride queue area and don’t jump the queue. It will make sure that everyone enjoys the ride equally well.</li>
+            <li>Pregnant Women, heart patients, persons with high blood pressure and those prone to epilepsy are advised to avoid fast/adventurous rides.</li>
+            <li>Please follow safety instructions of lifeguards, ride operators and instructions displayed near the rides.</li>
+            <li>Management shall not be held liable for loss of any valuables or other personal property left at the park. Please take care of your belongings.</li>
+            <li>Guest may be revoked and ejected from the park without refund, if misused or violated the park policies, safety instructions, rules or regulations.</li>
+            <li>Management is not responsible for any loss of personal belongings of the guests.</li>
+            <li>Limited locker on rental basis is available for your convenience. Please do not leave valuables unattended.</li>
+            <li>Guests are advised to empty the lockers with care before handing the key to the management. Management is not responsible for items left behind in the lockers.</li>
+            <li>Management reserves the right to stop taking picture or video recording.</li>
+        </ul>
+        <div class="part-2">
+            <h1>FOLLOWING ITEMS ARE NOT PERMITTED INSIDE THE WATER PARK:</h1>
+        </div>
+        <ul class="checklist">
+            <li>Licensed / unlicensed personal weapons</li>
+            <li>Explosives, fireworks, hazardous material/ chemicals</li>
+            <li>
+                Sharp objects like arrow, dart, knife, blade, scissors, pen knife, lighters etc</li>
+            <li>Food, drugs, alcoholic/non-alcoholic beverages (except baby food)</li>
+            <li>
+                Chewing gums and candies</li>
+            <li>Pets</li>
+            <li>Magic markers, spray paints and aerosol cans</li>
+        </ul>
+    </div>
+    
+</body>
+{% endblock %}
+</html>

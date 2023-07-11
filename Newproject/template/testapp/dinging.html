@@ -10,71 +10,164 @@
     <title>Document</title>
     <style>
         
-        body{
+        /* body{
             background-color:lightskyblue;
-        }
-        .first-container{
-            background-color: rgb(105, 136, 58);
+        } */
+        .first-container {
+            background-color: rgb(128, 128, 223);
             text-align: center;
-            font-style:italic;
-            
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 30px;
         }
-        .second-container .second-first img {
-            width: 600px;
-            height: 400px;
-            margin-top: 10px;
-            grid-auto-rows: 10px;
-                      
-
-        }
-        .second-container{
+        
+        .second-container {
             margin-top: 30px;
             font-size: 20px;
-            font-style: italic;
+            /* font-style: italic; */
             color: black;
             text-align: center;
-
         }
-        .first-container h1{
-            color:rgb(148, 24, 24)
+        
+        .first-container h1 {
+            color: rgb(148, 24, 24)
         }
-    </style>
-    <style>
+       
+        
         .image-container {
             position: relative;
-            display: inline-block;
-          }
-          
-          .image-container img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .image-container img {
             transition: opacity 0.3s ease;
-          }
-          
-          .image-container:hover img {
+            width: 1100px;
+            margin-left: 25px;
+            height: 400px;
+            margin-top: 10px;
+        }
+        
+        .image-container:hover img {
             opacity: 0.7; /* Change the opacity value as desired */
-          }
-          
+        }
+        
+        .image-container p {
+            margin-left: 20px;
+        }
+        div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.second-container{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
     </style>
    
 </head>
 <body>
-    <div class=" first-container">
-        <h1>Food and Dinging</h1>
+    <div class="first-container">
+        <p>Food and Dining</p>
     </div>
 
     <div class="second-container">
         <h4>Food and Dining at Wonderla Park, Hyderabad</h4>
-        <div class="second-first">
-            <img src="{% static 'testapp/image/1.jpg' %}" alt="">
-            <img src="{% static 'testapp/image/2.jpg' %}" alt="">
-            <img src="{% static 'testapp/image/3.jpg' %}" alt="">
-            <img src="{% static 'testapp/image/4.jpg' %}" alt="">
-            <img src="{% static 'testapp/image/5.jpg' %}" alt="">
-            <img src="{% static 'testapp/image/6.jpg' %}" alt="">
-            <img src="{% static 'testapp/image/7.jpg' %}" alt="">
-        </div>
-    <div class="second-container">
+        <div class="image-container">
+            <img src="{% static 'image/1.jpg' %}" alt="">
             <p>Explore a variety of flavours at Wonderla Hyderabad where we treat your tummy to shades of happiness. Our Hyderabad amusement park offers four multi-cuisine eateries to choose mouth-watering meals from. There are also snack counters and coffee shops for your dining pleasure. You can get your favourite vegetarian and non-vegetarian dishes at our eateries.</p>
         </div>
+    </div>
+    <div class="second-container">
+    <h4>Multi-cuisine restaurants at Wonderla Hyderabad</h4></div>
+    <div class="responsive">
+        <div class="gallery">
+          
+            <img src="{% static 'image/d1.avif' %}" alt="Cinque Terre">
+            <div class="desc"><strong>Galaxy AC Restaurant</strong></div><br>
+            Offering a rich multi-cuisine vegetarian and non-vegetarian buffet, the dishes at Galaxy are nothing short of heavenly.
+        </div>
+      </div>
+      
+      <div class="responsive">
+        
+        <div class="gallery">
+          
+            <img src="{% static 'image/d2.avif' %}" alt="Forest">
+          
+          <div class="desc"><strong>Food Court</strong></div>
+          Enjoy a variety of delicacies ranging from pizzas to pasta, refreshments to Oriental flavours, and local favourites, topped off with some delicious sundaes from Swirls.
+        </div>
+      </div>
+      <div>
+      
+      <div class="responsive">
+        
+        <div class="gallery">
+
+            <img src="{% static 'image/d3.avif' %}" alt="Northern Lights">
+          
+          <div class="desc"><strong>Waves Restaurant</strong></div>
+          Get the best of multi-cuisine specialties at Waves. Enjoy combo meals with kebabs and biryani along with other detectable Chinese combos.
+        </div>
+      </div>
+      
+      <div class="responsive">
+        <div class="gallery">
+          
+            <img src="{% static 'image/d4.avif' %}" alt="Mountains">
+          
+          <div class="desc"><strong>Park View Restaurant</strong></div>
+          Start the day with a traditional spread of Indian breakfast.
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>
        
     {% endblock %}
 </body>

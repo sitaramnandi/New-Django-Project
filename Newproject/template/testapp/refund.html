@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends "testapp/base.html" %}
+    {% block body_block %}
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container-1 {
+           position: relative;
+           width: 100%;
+           height: 350px;
+           margin-bottom: 20px;
+           overflow: hidden;
+           border-radius: 5px;
+       }
+
+       .container-1 img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           border-radius: 5px;
+           filter: blur(2px);
+       }
+
+       .container-1::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+       }
+
+       .book-now {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);  
+           color: #fff;
+           padding: 10px 20px;
+           border-radius: 5px;
+           font-size: 24px;
+           font-weight: bold;
+           text-align: center;
+       }
+       .checklist {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .checklist li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        .checklist li::before {
+            content: "\2713";
+            display: inline-block;
+            margin-right: 5px;
+            color: rgb(126, 200, 225);
+            font-weight: bold;
+        }
+        .container-2 {
+            margin-left: 70px;
+            font-style: normal;
+            margin-right: 40px;
+            text-align: justify;
+        }
+        .container-2 span {
+        color: red;
+    }
+       
+       </style>
+</head>
+<body>
+    <div class="container-1">
+        <img src="{% static 'image/g4.avif' %}" alt="">
+        <div class="book-now">REFUND / CANCELLATION POLICY</div>
+    </div>
+    <div class="container-2">
+        <div class="part-1">
+            <h1>Refund:</h1>
+        </div>
+        <p><span>The amount deposited through Payment Gateway for your booking at Wonder World is Non-refundable and only can be rescheduled within 30 days with an offline credit note.</span></p>
+    
+        <div class="part-2">
+            <h1>By credit card</h1>
+        </div>
+        <p>If the payment is made by credit card (VISA, MasterCard, or Maestro) cannot be refunded. You can only reschedule your trip within 30 days. Wonder world will not entertain any offers for rescheduling your trip.</p>
+        <p>The customer who requests the rescheduling of your trip, under the terms of the previous sections must request by e-mail to the address - info@wonderworld.com, and must mention the following information:</p>
+        <p>The customer, who requests to reschedule the purchased tickets, must apply with an email message to the address; info@wonderworld.com, which must contain the following information:</p>
+        <ul class="checklist">
+            <li>Order number/purchase order</li>
+            <li>
+                Copy of proof of payment</li>
+            <li>Name of the account holder</li>
+            <li>New Date of trip holder</li>
+        </ul>
+        <div class="part-3">
+            <h1>Reschedule Policy:</h1>
+        </div>
+    
+        <p>A Reschedule should be made before 72 hours from the date of check-in into the resort or water park at Wonder World.</p>
+        <p>B No offer will be entertained to reschedule your trip.</p>
+        <p><span>Rescheduling is not allowed after the end of the 2nd calendar day prior to the date of the ticket(s) purchased.</span></p>
+        <p>Any changes to the date of ticket(s) purchased will be subject to the maximum capacity of Wonder World for the intended day, defined in accordance with the security rules imposed by law and by health authorities. If you wish to change the date of use of the ticket (s) previously purchased, you must do at least 72 hours before the date for which the ticket (s) has been originally purchased.</p>
+        <div class="part-4">
+            <h1>Contacts:</h1>
+        </div>
+            <p>Mail: info@wonderworldwaterparkandresort.com</p>
+            <p>Mobile: 18001206676, 8144916946</p>
+        
+    </div>
+</body>
+{% endblock %}
+</html>

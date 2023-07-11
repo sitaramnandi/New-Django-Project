@@ -19,11 +19,24 @@ from testapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+     path('logo/', views.logo),
      path('', views.home_page),
     path('location/', views.location_page),
     path('signup/', views.signup_page),
     path('logout/', views.logout_page),
     path('dinging/', views.dining_page),
+    path('gallary/', views.gallary_page),
+    path('gallary-dining/', views.Gallary_dinging_page),
+    path('gallary-facility/', views.Gallary_facility_page),
+    path('facility/', views.facility),
     path('time/', views.timming_ticket),
+    path('contact/', views.Contact_us),
+    path('Book/', views.Book_page),
+    #footer page all URL
+    path('aboutus/', views.aboutus_page),
+    path('privacy/', views.Privacy_Policy),
+    path('term/', views.term_conditions),
+    path('refund/', views.refund),
+      path('', views.support),
     path('accounts/', include("django.contrib.auth.urls")),
 ]

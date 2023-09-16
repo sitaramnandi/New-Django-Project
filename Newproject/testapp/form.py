@@ -7,7 +7,7 @@ from testapp.models import ContactUs,bookModel
 class CustmerForm(forms.ModelForm):
     class Meta:
         model=User
-        fields=["username","password","email",]
+        fields=["username","email","password"]
 #Contatus Us
 class ContactUs_Form(forms.ModelForm):
    
@@ -52,6 +52,4 @@ class BookForm(forms.ModelForm):
         }
 
 
-class ForgotPasswordForm(PasswordResetForm):
-    email = forms.EmailField(label='Email')
     

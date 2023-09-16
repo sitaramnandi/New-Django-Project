@@ -65,7 +65,7 @@ def signup_page(request):
             user=form.save()
             user.set_password(user.password) #to the  hash password
             user.save()
-            return HttpResponseRedirect('/accounts/login')
+        return HttpResponseRedirect('/accounts/login/')
     return render(request,"testapp/signup.html",{"form":form})
 
 
